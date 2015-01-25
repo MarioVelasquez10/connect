@@ -1,1 +1,29 @@
-<div ng-controller="SearchController as search" class="search"><div class="form"></div><h3>Parameters</h3>phrase &nbsp;<input type="text" ng-model="request.phrase"/><br/>page_size &nbsp;<input type="text" ng-model="request.page_size"/><br/>page &nbsp;<input type="text" ng-model="request.page"/><br/><input type="button" value="Try it out" ng-click="send(request)"/><div class="request"><h3>Request</h3><pre>{{ apirequest }}</pre></div><h3>Response</h3><b>Code: {{ responsecode}}</b><div class="response"><img ng-show="isLoading" src="images/loading.gif"/><pre ng-hide="isLoading">{{ apiresponse | json }}</pre></div><h3>Formatted Response</h3><div class="formatted-response"><div ng-repeat="image in apiresponse.images" ng-hide="isLoading" class="images"><div class="item"><img ng-src="{{ image.display_sizes[0].uri }}"/><span>{{ image.title }}</span></div></div></div></div>
+<div ng-controller="SearchController as search" class="search">
+  <div class="form"></div>
+  <h3>Parameters</h3>phrase &nbsp;
+  <input type="text" ng-model="request.phrase" />
+  <br/>page_size &nbsp;
+  <input type="text" ng-model="request.page_size" />
+  <br/>page &nbsp;
+  <input type="text" ng-model="request.page" />
+  <br/>
+  <input type="button" value="Try it out" ng-click="send(request)" />
+  <div class="request">
+    <h3>Request</h3>
+    <pre>{{ apirequest }}</pre>
+  </div>
+  <h3>Response</h3><b>Status: {{ responsecode}}</b>
+  <div class="response">
+    <img ng-show="isLoading" src="images/loading.gif" />
+    <pre ng-hide="isLoading">{{ apiresponse | json }}</pre>
+  </div>
+  <h3>Formatted Response</h3>
+  <div class="formatted-response">
+    <div ng-repeat="image in apiresponse.images" ng-hide="isLoading" class="images">
+      <div class="item">
+        <img ng-src="{{ image.display_sizes[0].uri }}" />
+        <span>{{ image.title }}</span>
+      </div>
+    </div>
+  </div>
+</div>
