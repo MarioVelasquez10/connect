@@ -12,7 +12,7 @@
     <h3>Request</h3>
     <pre>{{ apirequest }}</pre>
   </div>
-  <h3>Response</h3><b>Status: {{ responsecode}}</b>
+  <h3>Response</h3><b>Status: {{ responsecode }}</b>
   <div class="response">
     <img ng-show="isLoading" src="images/loading.gif" />
     <pre ng-hide="isLoading">{{ apiresponse | json }}</pre>
