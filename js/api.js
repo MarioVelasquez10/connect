@@ -35,7 +35,7 @@
 
       var req = {
         method: 'GET',
-        url: 'https://connect.gettyimages.com/v3/search/images',
+        url: 'https://api.gettyimages.com/v3/search/images',
         headers: {
           'Api-Key': '7wjf4bsm2gpahzdm6yetrz2t'
         },
