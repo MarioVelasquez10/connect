@@ -14,23 +14,58 @@
       page_size: 15,
       page: 1,
       phrase: 'dog',
-      fields: 'id,title,thumb'
+      fields: 'id,title,thumb',
+      sort_order: 'best'
     };
+
+    $scope.sort_orders = ['best', 'most_popular', 'newest'];
+    $scope.status_codes = [{
+      code: 200,
+      message: 'Success'
+    }, {
+      code: 400,
+      message: 'InvalidPage'
+    }, {
+      code: 400,
+      message: 'MalformedRequest'
+    }, {
+      code: 400,
+      message: 'InvalidParameterValue'
+    }, {
+      code: 400,
+      message: 'UnknownProviderUri'
+    }, {
+      code: 400,
+      message: 'IncorrectlyFormedUri'
+    }, {
+      code: 401,
+      message: 'AuthorizationTokenRequired'
+    }, {
+      code: 403,
+      message: 'UnauthorizedDisplaySize'
+    }, {
+      code: 403,
+      message: 'NoAccessToProductType'
+    }];
 
     $scope.send = function(request) {
 
       $scope.isLoading = true;
 
-      if(!request.page) {
+      if (!request.page) {
         delete request.page
       }
 
-      if(!request.phrase) {
+      if (!request.phrase) {
         delete request.phrase;
       }
 
-      if(!request.page_size) {
+      if (!request.page_size) {
         delete request.page_size;
+      }
+
+      if (!request.sort_order) {
+        delete request.sort_order;
       }
 
       var req = {
