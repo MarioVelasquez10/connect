@@ -486,7 +486,11 @@ header	{
   text-decoration: none;
   width:100%;
   min-width:150px;
+  max-width:300px;
 }
+.try	{
+	text-align:center;
+	}
 
 .btn-black:hover {
   background: #949494;
@@ -530,6 +534,23 @@ footer	{
 section.hero h1	{
 	text-align:center;
 }
+section.hero h2	{
+	text-align:center;
+}
+section.hero h3	{
+	text-align:center;
+}
+section.hero h4	{
+	text-align:center;
+}
+section.hero h5	{
+	text-align:center;
+}
+section.hero p	{
+	text-align:center;
+}
+
+
 section.hero p.hero-prop	{
 	text-align:center;
 	padding-left:50px;
