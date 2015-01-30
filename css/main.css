@@ -492,6 +492,35 @@ header p	{
   width:100%;
   min-width:150px;
   max-width:300px;
+  background:#e7e7e7;
+}
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  width:100%;
+  min-width:150px;
+  max-width:300px;
+}
+.ghost-button:hover {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  width:100%;
+  min-width:150px;
+  max-width:300px;
+  background:white;
+  color:#A4A3A3;
 }
 .header-center	{
 	text-align:center;
@@ -604,9 +633,6 @@ div.social-grid	{
 .product-cta	{
 	text-align:center;
 	padding-top:50px;
-}
-.product-button		{
-	max-width:200px;
 }
 .learn-heading	{
 	text-align:center;
