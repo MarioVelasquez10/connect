@@ -524,6 +524,9 @@ section.learn {
 	padding-top:50px;
 	padding-bottom:50px;
 }
+section.hero div.site-width	{
+	text-align:center;
+}
 footer	{
 	background:black;
 	color:white;
@@ -590,8 +593,8 @@ section.hero p.hero-prop	{
 	padding-bottom:50px;
 }
 div.social-grid	{
-	color:white;
-	background:black;
+	color:black;
+	background:white;
 }
 .cross-promo-text	{
 	text-align:center;
